@@ -21,6 +21,14 @@ if [ ! -f /config/ha-bridge-"$VERSION".jar ]; then
 else
   echo "Using existing version '$VERSION'"
 fi
+
+# check for any ssh keypairs in your config directory to apply to container
+if [ -f /config/data/.ssh/ ]; then
+  echo "Copying SSH keypairs to container"
+  cp -rf /config/data/.ssh /root/
+fi
+
+
 echo "Setting correct permissions"
 chown -R nobody:users /config
 
