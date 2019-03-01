@@ -1,6 +1,6 @@
 FROM phusion/baseimage:0.11
 
-MAINTAINER aptalca
+MAINTAINER csek06
 
 VOLUME ["/config"]
 
