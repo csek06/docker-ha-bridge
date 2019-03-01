@@ -23,7 +23,7 @@ else
 fi
 
 # check for any ssh keypairs in your config directory to apply to container
-if [ -f /config/data/.ssh/ ]; then
+if [ -d /config/data/.ssh/ ]; then
   echo "Copying SSH keypairs to container"
   cp -rf /config/data/.ssh /root/
 fi
