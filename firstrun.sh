@@ -22,7 +22,7 @@ else
   echo "Using existing version '$VERSION'"
 fi
 
-# check for any ssh keypairs in your config directory to apply to container
+# check for any ssh keypairs in your config directory and apply to container
 if [ -d /config/data/.ssh/ ]; then
   echo "Copying SSH keypairs to container"
   cp -rf /config/data/.ssh /root/
